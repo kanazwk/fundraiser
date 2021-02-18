@@ -40,15 +40,15 @@ contract("Fundraiser", accounts => {
 			const actual = await fundraiser.description();
 			assert.equal(actual, description, "description should match");
 		});
-		
+
 		it("gets the beneficiary", async () => {
 			const actual = await fundraiser.beneficiary();
-			assert.equal(actual, beneficiary, "beneficiary address  should match");
+			assert.equal(actual, beneficiary, "beneficiary addresses should match");
 		});
 
-		it("gets the custodian", async ()=> {
+		it("gets the custodian", async () => {
 			const actual = await fundraiser.custodian();
-			assert.equalk(actual, custodian, "custodian should match");
-
+			assert.equal(actual, custodian, "custodian should match");
+		});
 	});
 });
